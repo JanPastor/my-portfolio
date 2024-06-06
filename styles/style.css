@@ -358,7 +358,7 @@ ul, ol {
 .wave-container {
     width: 100%;
     height: 75px;
-    background: url('/images/svg/layer1.svg') no-repeat center bottom;
+    background: url("svg/layer1.svg") no-repeat center bottom;
     background-size: cover;
     margin-top: -5px;
     overflow: hidden;
