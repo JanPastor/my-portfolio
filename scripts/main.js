@@ -1,28 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     const navbar = document.querySelector('.navbar');
-//     const toggleButton = document.querySelector('.navbar-toggle');
-//
-//     // Toggle navbar visibility
-//     toggleButton.addEventListener('click', function () {
-//         if (navbar.style.display === 'none' || navbar.style.display === '') {
-//             navbar.style.display = 'flex';
-//         } else {
-//             navbar.style.display = 'none';
-//         }
-//     });
-//
-//     // Hide navbar on scroll
-//     let lastScrollTop = 0;
-//     window.addEventListener('scroll', function () {
-//         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//         if (scrollTop > lastScrollTop) {
-//             navbar.style.display = 'none';
-//         } else {
-//             navbar.style.display = 'flex';
-//         }
-//         lastScrollTop = scrollTop;
-//     });
-// });
 
 // Get the modal
 var modal = document.getElementById('imageModal');

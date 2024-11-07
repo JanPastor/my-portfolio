@@ -57,6 +57,8 @@ body {
     margin: 0;
     padding: 0;
     /*max-width: 1200px;*/
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative; /* Required for absolute positioning context */
 }
 /*Adjusting default website scroll bar*/
 body::-webkit-scrollbar {
@@ -70,9 +72,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
+    position: relative;
     margin-left: 6rem;
     padding: 1rem;
     width: calc(100% - 6rem);
+    overflow: visible; /* Allow waves to overflow */
 }
 
 /* Navbar styling with gradient */
@@ -184,6 +188,14 @@ main {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+    overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+}
+
+section {
+    position: relative;
+    z-index: 2; /* Keep content above waves */
+    margin: 2rem 0;
 }
 
 html {
