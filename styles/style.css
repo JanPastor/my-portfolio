@@ -1,13 +1,15 @@
+/* Import Quicksand font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
-/* Adjustments for larger screens */
+/* === RESPONSIVE DESIGN BREAKPOINTS === */
+/* Large screens: Add more padding for better spacing */
 @media (min-width: 1200px) {
     .container {
         padding: 40px;
     }
 }
 
-/* Adjustments for tablets */
+/* Tablet adjustments: Reduce padding and adjust navbar for smaller screens */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
@@ -23,7 +25,8 @@
         margin-bottom: 10px;
     }
 }
-/* Adjustments for mobile devices */
+
+/* Mobile adjustments: Scale down font sizes for readability */
 @media (max-width: 480px) {
     h1 {
         font-size: 40px;
@@ -41,6 +44,8 @@
         font-size: 14px;
     }
 }
+
+/* === ROOT VARIABLES AND BASE STYLES === */
 root {
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
@@ -49,7 +54,8 @@ root {
     --bg-primary:#23232e;
     --bg-secondary: #141418;
 }
-/* Apply a diagonal gradient background mimicking the ocean */
+
+/* Apply ocean-themed gradient background and set base layout */
 body {
     background: linear-gradient(135deg, #87CEFA, #1E3A5F);
     /*font-family: "Open Sans", sans-serif*/
@@ -60,7 +66,9 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     position: relative; /* Required for absolute positioning context */
 }
-/*Adjusting default website scroll bar*/
+
+/* === SCROLLBAR CUSTOMIZATION === */
+/* Make scrollbar thinner and themed */
 body::-webkit-scrollbar {
     width: 0.25rem;
 }
@@ -71,6 +79,8 @@ body::-webkit-scrollbar-thumb {
     background: #2778a3;
 }
 
+/* === MAIN CONTENT LAYOUT === */
+/* Position main content relative to sidebar and allow wave overflow */
 main {
     position: relative;
     margin-left: 6rem;
@@ -79,7 +89,8 @@ main {
     overflow: visible; /* Allow waves to overflow */
 }
 
-/* Navbar styling with gradient */
+/* === NAVIGATION SIDEBAR === */
+/* Fixed sidebar with gradient background and expandable width */
 .navbar {
     position: fixed;
     left: 0;
@@ -101,7 +112,8 @@ main {
     width: 15rem; /* Expand width on hover */
 }
 
-/* Animation for the logo spin */
+/* === NAVIGATION ANIMATIONS === */
+/* Logo rotation animation on navbar hover */
 @keyframes spin-left {
     0% {
         transform: rotate(0deg);
@@ -124,6 +136,8 @@ main {
     transform: rotate(0deg); /* Return to initial position */
 }
 
+/* === NAVIGATION ITEMS === */
+/* List styling for navigation menu */
 .nav-list {
     list-style: none;
     margin: 0;
@@ -182,7 +196,6 @@ main {
     transform: scale(1.1); /* Scale on hover */
 }
 
-
 .container {
     max-width: 1200px;
     width: 100%;
@@ -203,6 +216,8 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
+/* === TYPOGRAPHY === */
+/* Headings with consistent styling and text shadows */
 h1 {
     margin: 0;
     font-size: 60px;
@@ -232,6 +247,7 @@ h4 {
     text-shadow: 3px 3px 1px black;
 }
 
+/* Text content styling */
 p,
 li {
     font-size: 18px;
@@ -280,6 +296,8 @@ ul, ol {
     background-color: #2778a3;
 }
 
+/* === GALLERY STYLING === */
+/* Grid layout for gallery items */
 .gallery {
     margin-bottom: 40px;
     padding: 20px;
@@ -301,12 +319,16 @@ ul, ol {
     margin-top: 20px;
 }
 
+/* Image container styling */
 .gallery-item {
     overflow: hidden;
     border: none;
     border-radius: 5px;
+    position: relative;
+    z-index: 0;
 }
 
+/* Image hover effects */
 .gallery-item img {
     width: 100%;
     height: auto;
@@ -319,25 +341,49 @@ ul, ol {
     transform: scale(1.1);
 }
 
+/* === MODAL STYLING === */
+/* Modal overlay for fullscreen images */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.9);
+    /* Use flexbox for centering */
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
+/* Modal content wrapper */
 .modal-content {
-    margin: 5% auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+    max-width: 90vw; /* 90% of viewport width */
+    max-height: 80vh; /* 80% of viewport height */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Preserve aspect ratio */
+    display: block; /* Ensure block layout */
+    margin: 0 auto;
 }
 
+/* Close button styling */
+.close {
+    position: fixed; /* Fixed position relative to viewport */
+    right: 35px;
+    top: 15px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000; /* Ensure close button is above modal */
+}
+
+/* Image caption styling */
 #caption {
     margin: auto;
     display: block;
@@ -349,24 +395,20 @@ ul, ol {
     height: 100px;
 }
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+/* Responsive adjustments */
+@media screen and (max-width: 700px) {
+    .modal-content {
+        max-width: 95%;
+    }
+    
+    #caption {
+        width: 95%;
+        font-size: 0.9rem;
+    }
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Wave Container Styling */
+/* === DECORATIVE ELEMENTS === */
+/* Wave animation container */
 .wave-container {
     width: 100%;
     height: 75px;
