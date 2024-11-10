@@ -46,13 +46,18 @@
 }
 
 /* === ROOT VARIABLES AND BASE STYLES === */
-root {
+:root {
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
     --text-primary: grey;
     --text-secondary: white;
     --bg-primary:#23232e;
     --bg-secondary: #141418;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
 }
 
 /* Apply ocean-themed gradient background and set base layout */
@@ -167,6 +172,23 @@ main {
     font-family: 'Quicksand', sans-serif;
     width: 100%; /* Ensure full width for links */
     transition: color 0.3s; /* Smooth transition */
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2778a3;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .nav-link img, .nav-icon {
@@ -212,6 +234,7 @@ section {
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 15px;
     font-family: "Open Sans", sans-serif;
 }
@@ -302,6 +325,16 @@ ul, ol {
     margin-bottom: 40px;
     padding: 20px;
     border-radius: 10px;
+    background: rgba(135, 206, 250, 0.1);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 3;
+}
+
+.gallery:hover {
+    transform: translateY(-5px);
 }
 
 .gallery.mate-rov-pictures {
@@ -314,9 +347,11 @@ ul, ol {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    position: relative;
+    z-index: 2;
 }
 
 /* Image container styling */
@@ -333,7 +368,7 @@ ul, ol {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s;
+    transition: transform 0.5s ease;
     cursor: pointer;
 }
 
@@ -416,5 +451,16 @@ ul, ol {
     background-size: cover;
     margin-top: -5px;
     overflow: hidden;
+}
+
+.bubble-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
 }
 
