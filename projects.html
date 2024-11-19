@@ -9,13 +9,22 @@
     <meta name="keywords" content="Portfolio, Jan, Pastor, Electrical Engineer, Computer Engineer, Programming">
     <meta name="author" content="Electrical and Computer Engineer: Jan Pastor">
     <title>Jan Pastor - Projects</title>
-    <link href="styles/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="icon" href="images/favicon/electrical.ico" type="image/x-icon">
+ <!-- CSS Files -->
+<link href="styles/base.css" rel="stylesheet">
+<link href="styles/layout.css" rel="stylesheet">
+<link href="styles/components.css" rel="stylesheet">
+<link href="styles/navigation.css" rel="stylesheet">
+<link href="styles/gallery.css" rel="stylesheet">
+<link href="styles/projects.css" rel="stylesheet">
+<link href="styles/experience.css" rel="stylesheet">
+<link href="styles/responsive.css" rel="stylesheet">
+<!-- Fonts and Icons -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="icon" href="images/favicon/electrical.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="main-header">
             <nav class="navbar">
                 <ul class="nav-list">
                     <li class="logo">
@@ -56,77 +65,80 @@
                     </li>
                 </ul>
             </nav>
-
-    <main>
-        <!-- AI Web Scraper Project -->
-        <section class="project-section mate-rov-project">
-            <h2>AI Web Scraper Project</h2>
-            <h3>Using Selenium and Ollama to scrape data from websites</h3>
-            <div class="tech-stack">
-                <span>Python</span>
-                <span>Selenium</span>
-                <span>Ollama</span>
-                <span>Streamlit</span>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/project_images/ai_scraper1.png" alt="AI Web Scraper Interface">
+        </header>
+        <main class="projects-container">
+            <!-- AI Web Scraper Project -->
+            <section class="project-section mate-rov-project">
+                <h2>AI Web Scraper Project</h2>
+                <h3>Using Selenium and Ollama to scrape data from websites</h3>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Selenium</span>
+                    <span>Ollama</span>
+                    <span>Streamlit</span>
                 </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/project_images/ai_scraper1.png" alt="AI Web Scraper Interface">
+                    </div>
 
-                <div class="gallery-item">
-                    <img src="images/project_images/ai_scraper2.png" alt="AI Web Scraper Interface">
-                </div>
+                    <div class="gallery-item">
+                        <img src="images/project_images/ai_scraper2.png" alt="AI Web Scraper Interface">
+                    </div>
 
-                <div class="gallery-item">
-                    <img src="images/project_images/txt_batch1_result.png" alt="AI Web Scraper Results">                 
-                </div>
-                <div class="gallery-item">
-                    <div class="video-container">
-                        <video controls>
-                            <source src="videos/AI_ScraperDemo.mp4" type="video/mp4">
-                        </video>
+                    <div class="gallery-item">
+                        <img src="images/project_images/txt_batch1_result.png" alt="AI Web Scraper Results">                  
+                    </div>
+                    <div class="gallery-item">
+                        <div class="video-container">
+                            <video controls preload="metadata" playsinline>
+                                <source src="videos/AI_ScraperDemo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="project-links">
-                <a href="https://github.com/JanPastor/AI-Web-Scraper" target="_blank">View Code</a>
-            </div>
-        </section>
+                <div class="project-links">
+                    <a href="https://github.com/JanPastor/AI-Web-Scraper" target="_blank">View Code</a>
+                </div>
+            </section>
 
-        <!-- Add more project sections here -->
-        <section class="project-section CPP Bronco Space BLADE Project">
-            <h2>CPP Bronco Space BLADE Project</h2>
-            <h3>Team 2's Cube Satellite 3D Printed Model and Avioncs Kit Demonstration</h3>
-            <div class="tech-stack">
-                <span>3D Printing</span>
-                <span>Avionics Kit</span>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/project_images/team2CubeSat3Dmodel.png" alt="Final CubeSat CAD Model">
+            <!-- Add more project sections here -->
+            <section class="project-section blade-project">
+                <h2>CPP Bronco Space BLADE Project</h2>
+                <h3>Team 2's Cube Satellite 3D Printed Model and Avioncs Kit Demonstration</h3>
+                <div class="tech-stack">
+                    <span>3D Printing</span>
+                    <span>Avionics Kit</span>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/project_images/BLADETeam2.jpg" alt="Team 2's BLADE Organization">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/project_images/team2CubeSat3Dmodel.png" alt="Final CubeSat CAD Model">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/project_images/BLADETeam2.jpg" alt="Team 2's BLADE Organization">
+                    </div>
+                    <div class="gallery-item">
+                        <div class="video-container">
+                            <video controls preload="metadata" playsinline>
+                                <source src="videos/Avionics_Kit_Team2_BeyBLADERS_version2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <div class="video-container">
-                        <video controls>
-                            <source src="videos/Avionics_Kit_Team2_BeyBLADERS_version2.mp4" type="video/mp4">
-                        </video>
-                </div>
-            </div>
-            <div class="project-links">
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <!-- Modal for images -->
-    <div class="modal" id="imageModal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="fullImage">
-        <div id="caption"></div>
+        <!-- Modal for images -->
+        <div class="modal" id="imageModal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="fullImage">
+            <div id="caption"></div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="scripts/main.js"></script>
     </div>
-
-    <!-- Scripts -->
-    <script src="scripts/main.js"></script>
 </body>
 </html>

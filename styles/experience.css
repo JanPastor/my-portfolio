@@ -1,0 +1,64 @@
+/* === EXPERIENCE SECTION STYLING === */
+.experience-section {
+    margin-bottom: 2rem;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.experience-card h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.experience-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.experience-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.experience-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.experience-section ul.experience-list,
+.experience-section ol.experience-list {
+    list-style-type: square;
+    padding-left: 150px;
+    margin-left: 0;
+    text-align: left;
+}
+
+.experience-section li {
+    text-align: left;
+}

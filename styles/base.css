@@ -1,0 +1,92 @@
+/* Import Quicksand font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+/* === ROOT VARIABLES AND BASE STYLES === */
+:root {
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    --text-primary: grey;
+    --text-secondary: white;
+    --bg-primary:#23232e;
+    --bg-secondary: #141418;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+}
+
+/* Base styles */
+html {
+    scroll-behavior: smooth;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #87CEFA, #1E3A5F);
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* === TYPOGRAPHY === */
+h1 {
+    margin: 0;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 1px black;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 3px 3px 1px black;
+    color: white;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 3px 3px 1px black;
+    color: white;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 1px black;
+}
+
+p, li {
+    font-size: 18px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    padding: 3px;
+    color: white;
+    text-align: center;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* === SCROLLBAR CUSTOMIZATION === */
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #2778a3;
+}

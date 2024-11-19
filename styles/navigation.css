@@ -1,0 +1,115 @@
+/* === NAVIGATION SIDEBAR === */
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px 0;
+    background: linear-gradient(135deg, rgba(135, 206, 250, 0.9), rgba(30, 58, 95, 0.9));
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 5rem;
+    height: 100vh;
+    z-index: 1000;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.navbar:hover {
+    width: 15rem;
+}
+
+/* Navigation Items */
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.nav-item, .logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2778a3;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    background-color: #2778a3;
+    color: white;
+}
+
+.nav-link img, .nav-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.nav-text {
+    display: none;
+    white-space: nowrap;
+}
+
+.navbar:hover .nav-text {
+    display: inline;
+    margin-left: 10px;
+    transition: display 0.3s, margin-left 0.3s;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Logo Animation */
+@keyframes spin-left {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-180deg); }
+}
+
+.navbar:hover .logo-img {
+    transform: rotate(-180deg);
+}
+
+.navbar .logo-img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar:not(:hover) .logo-img {
+    transform: rotate(0deg);
+}
