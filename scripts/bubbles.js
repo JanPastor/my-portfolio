@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Create new bubble every 150ms
-    setInterval(createBubble, 175);
+    setInterval(createBubble, 250);
 });
