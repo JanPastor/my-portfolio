@@ -131,16 +131,18 @@
 .video-container {
     position: relative;
     width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
     background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
-    max-height: 400px;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -162,6 +164,22 @@
     transform: translate(-50%, -50%);
     color: #ff6b6b;
     z-index: 1;
+}
+
+/* Fullscreen styles */
+.video-container video:fullscreen {
+    object-fit: contain;
+    background: black;
+}
+
+.video-container video:-webkit-full-screen {
+    object-fit: contain;
+    background: black;
+}
+
+.video-container video:-moz-full-screen {
+    object-fit: contain;
+    background: black;
 }
 
 /* Gallery Grid Styles */
