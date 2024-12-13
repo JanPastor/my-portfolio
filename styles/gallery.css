@@ -17,7 +17,7 @@
 
 .gallery.mate-rov-pictures,
 .gallery.mate-floats-pictures {
-    background: linear-gradient(135deg, #87CEFA, #1E3A5F);
+    background: linear-gradient(135deg, rgba(18, 125, 192, 0.712), #032147);
 }
 
 .gallery-grid {

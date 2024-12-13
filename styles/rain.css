@@ -1,15 +1,4 @@
 /* rain.css */
-
-/* Ensure body takes full height without restricting overflow */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    /* Removed overflow: hidden to allow scrolling */
-    position: relative;
-    background: #1E3A5F; /* Optional: Set a background color */
-}
-
 /* Rain Container */
 .rain {
     position: fixed;
@@ -17,8 +6,8 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Allow interactions with underlying content */
-    z-index: 0; /* Behind other content */
+    pointer-events: none;
+    z-index: -1;
     overflow: hidden;
 }
 
@@ -37,22 +26,6 @@ html, body {
 @keyframes fall {
     to {
         transform: translateY(100vh) translateX(85px);
-    }
-}
-
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .raindrop {
-        width: 1px;
-        height: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .raindrop {
-        width: 1px;
-        height: 8px;
     }
 }
 

@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const rainContainer = document.querySelector('.rain');
-    const numberOfDrops = 150; // Increased for denser rain
+    const numberOfDrops = 20; // Adjust to control # of raindrops
 
     for (let i = 0; i < numberOfDrops; i++) {
         const drop = document.createElement('div');

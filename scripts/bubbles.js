@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bubble.style.left = `${Math.random() * 100}%`;
         
         // Random animation duration
-        bubble.style.animationDuration = `${Math.random() * 4 + 6}s`; 
+        bubble.style.animationDuration = `${Math.random() * 2 + 3}s`; 
         
         container.appendChild(bubble);
         
@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Create new bubble every 150ms
-    setInterval(createBubble, 250);
+    setInterval(createBubble, 500);
 });
