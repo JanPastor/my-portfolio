@@ -16,6 +16,13 @@ main {
     overflow-x: hidden;
 }
 
+.content {
+    text-align: center;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 section {
     position: relative;
     z-index: 2;
@@ -47,4 +54,117 @@ section {
     overflow: hidden;
     pointer-events: none;
     z-index: 1;
+}
+
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 60px; /* Space for fixed navbar */
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 0.5rem;
+        margin-top: 1rem;
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    /* Horizontal scrolling for tag containers */
+    .tags-container {
+        display: flex;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        padding-bottom: 10px; /* Space for scrollbar */
+        margin: 0 -10px; /* Negative margin to counter parent padding */
+        padding: 0 10px; /* Add padding back */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        scrollbar-width: thin; /* Firefox */
+        -ms-overflow-style: auto; /* IE/Edge - always show */
+    }
+
+    /* Style the scrollbar - always visible */
+    .tags-container::-webkit-scrollbar {
+        height: 4px;
+        display: block; /* Always show scrollbar */
+    }
+
+    .tags-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+    }
+
+    .tags-container::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+    }
+
+    .tag {
+        flex: 0 0 auto; /* Prevent tags from shrinking */
+        margin: 0.25rem 0.5rem;
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    section {
+        margin: 1rem 0;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 8px;
+    }
+
+    .content {
+        padding: 0.25rem;
+    }
+
+    .tags-container {
+        margin: 0 -8px;
+        padding: 0 8px;
+    }
+
+    .tag {
+        margin: 0.2rem 0.4rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
 }
