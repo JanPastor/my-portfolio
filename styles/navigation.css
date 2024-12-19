@@ -6,13 +6,13 @@
     padding: 20px 0;
     background: linear-gradient(135deg, rgba(31, 144, 214, 0.9), rgba(30, 58, 95, 0.9));
     border-radius: 0 10px 10px 0;
-    display: flex-start; /* Align items to the left */
+    display: flex-start;
     flex-direction: column;
     align-items: flex-start;
     width: 15rem;
     height: 100vh;
     z-index: 1000;
-    transition: width 0.3s;
+    transition: all 0.3s ease;
     overflow: hidden;
 }
 
@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 }
 
 .logo {
@@ -85,16 +86,27 @@
     display: inline; 
     white-space: nowrap; /* Prevent text from wrapping */
     margin-left: 10px;
+    font-size: 1rem;
+    transition: opacity 0.3s;
 }
-
-/* .navbar:hover .nav-text {
-    display: inline;
-    margin-left: 10px;
-    transition: display 0.3s, margin-left 0.3s;
-} */
 
 .nav-icon:hover {
     transform: scale(1.1);
+}
+
+/* Logo styling */
+.logo-img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.navbar:hover .logo-img {
+    transform: rotate(360deg);
+}
+
+.navbar:not(:hover) .logo-img {
+    transform: rotate(0deg);
 }
 
 /* Logo Animation */
@@ -103,14 +115,67 @@
     100% { transform: rotate(-180deg); }
 }
 
-.navbar:hover .logo-img {
-    transform: rotate(-180deg);
+/* Mobile nav toggle button - hidden by default */
+.mobile-nav-toggle {
+    display: none; /* Hide on desktop */
 }
 
-.navbar .logo-img {
-    transition: transform 0.3s ease-in-out;
-}
+/* Mobile Navigation Accordion */
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        max-height: 60px;
+        overflow: hidden;
+        border-radius: 0;
+        padding: 0;
+    }
 
-.navbar:not(:hover) .logo-img {
-    transform: rotate(0deg);
+    .navbar.active {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .mobile-nav-toggle {
+        display: block; /* Show only on mobile */
+        width: 100%;
+        padding: 15px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        text-align: right;
+    }
+
+    .nav-list {
+        padding: 10px 0;
+        display: none;
+    }
+
+    .navbar.active .nav-list {
+        display: flex;
+    }
+
+    .nav-item {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link {
+        justify-content: flex-start;
+        color: white;
+    }
+
+    .logo {
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo-img {
+        width: 30px;
+        height: 30px;
+    }
 }
