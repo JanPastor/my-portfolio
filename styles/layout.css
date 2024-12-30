@@ -1,9 +1,9 @@
 /* === MAIN CONTENT LAYOUT === */
 main {
     position: relative;
-    margin-left: 6rem;
+    margin-left: 8rem;
     padding: 1rem;
-    width: calc(100% - 6rem);
+    width: calc(100% - 8rem);
     overflow: visible;
 }
 
