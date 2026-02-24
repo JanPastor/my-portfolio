@@ -7,35 +7,41 @@
 }
 
 .tag {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(26, 110, 245, 0.07);
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.9rem;
-    color: white;
+    color: #1a6ef5;
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(26, 110, 245, 0.3);
     transition: all 0.3s ease;
     cursor: default;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .tag:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(26, 110, 245, 0.15);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(26, 110, 245, 0.15);
+    border-color: #1a6ef5;
 }
 
 /* Links styling */
 .flex-container a {
     margin: 0 10px;
     text-decoration: none;
-    text-shadow: 3px 3px 1px black;
-    color: white;
+    text-shadow: none;
+    color: #ffffff;
     padding: 14px 16px;
-    background-color: #5B77AA;
-    border-radius: 5px;
+    background-color: #1a6ef5;
+    border-radius: 4px;
     transition-duration: 0.4s;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .flex-container a:hover {
-    background-color: #2778a3;
+    background-color: #0a4bbf;
+    box-shadow: 0 4px 16px rgba(26, 110, 245, 0.35);
 }

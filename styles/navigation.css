@@ -4,21 +4,23 @@
     left: 0;
     top: 0;
     padding: 20px 0;
-    background: linear-gradient(135deg, rgba(31, 144, 214, 0.9), rgba(30, 58, 95, 0.9));
+    background: linear-gradient(180deg, #ffffff 0%, #f4f6f9 100%);
+    border-right: 1px solid #d0d8e4;
+    box-shadow: 2px 0 12px rgba(26, 110, 245, 0.06);
     border-radius: 0 10px 10px 0;
-    display: flex-start;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 15rem;
+    width: 5.5rem;
     height: 100vh;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: width 0.3s ease;
     overflow: hidden;
 }
 
-/*.navbar:hover {
+.navbar:hover {
     width: 15rem;
-}*/
+}
 
 /* Navigation Items */
 .nav-list {
@@ -47,8 +49,8 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
-    font-family: 'Quicksand', sans-serif;
+    color: #1a2233;
+    font-family: 'Rajdhani', sans-serif;
     width: 100%;
     transition: color 0.3s;
     position: relative;
@@ -62,7 +64,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #2778a3;
+    background: #1a6ef5;
     transition: width 0.3s ease;
 }
 
@@ -71,8 +73,8 @@
 }
 
 .nav-link:hover {
-    background-color: #2778a3;
-    color: white;
+    background-color: rgba(26, 110, 245, 0.08);
+    color: #1a6ef5;
 }
 
 .nav-link img, .nav-icon {
@@ -83,11 +85,16 @@
 }
 
 .nav-text {
-    display: inline; 
-    white-space: nowrap; /* Prevent text from wrapping */
+    display: inline;
+    white-space: nowrap;
     margin-left: 10px;
     font-size: 1rem;
-    transition: opacity 0.3s;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.navbar:hover .nav-text {
+    opacity: 1;
 }
 
 .nav-icon:hover {
@@ -131,7 +138,8 @@
         min-height: 60px;
         border-radius: 0;
         padding: 0;
-        background: linear-gradient(135deg, rgba(31, 144, 214, 0.75), rgba(30, 58, 95, 0.75));
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid #d0d8e4;
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
     }
@@ -150,17 +158,17 @@
         padding: 8px 15px;
         margin: 0;
         border-radius: 20px;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(26, 110, 245, 0.07);
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
     }
 
     .nav-item:hover {
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(26, 110, 245, 0.13);
     }
 
     .nav-link {
-        color: white;
+        color: #1a2233;
         font-size: 0.9rem;
         padding: 0;
         justify-content: center;

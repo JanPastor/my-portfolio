@@ -1,10 +1,16 @@
 /* === MAIN CONTENT LAYOUT === */
 main {
     position: relative;
-    margin-left: 8rem;
+    margin-left: 5.5rem;
     padding: 1rem;
-    width: calc(100% - 8rem);
+    width: calc(100% - 5.5rem);
     overflow: visible;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+body:has(.navbar:hover) main {
+    margin-left: 15rem;
+    width: calc(100% - 15rem);
 }
 
 .container {

@@ -24,15 +24,19 @@
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    background: #ffffff;
+    border-radius: 8px;
     padding: 1.5rem;
+    border: 1px solid #d0d8e4;
     backdrop-filter: blur(8px);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 16px rgba(26, 110, 245, 0.06);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 28px rgba(26, 110, 245, 0.13);
+    border-color: rgba(26, 110, 245, 0.35);
 }
 
 .project-media {
@@ -57,10 +61,12 @@
 }
 
 .tech-stack li {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(26, 110, 245, 0.07);
     padding: 0.25rem 0.75rem;
-    border-radius: 15px;
+    border-radius: 4px;
     font-size: 0.9rem;
+    color: #1a6ef5;
+    border: 1px solid rgba(26, 110, 245, 0.25);
 }
 
 .project-links {
@@ -71,43 +77,51 @@
 
 .project-link {
     padding: 0.5rem 1rem;
-    background: #2778a3;
-    color: white;
+    background: #1a6ef5;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .project-link:hover {
-    background: #1e5f8a;
+    background: #0a4bbf;
+    box-shadow: 0 4px 16px rgba(26, 110, 245, 0.35);
 }
 
 /* Project Section */
 .project-section {
     margin-bottom: 40px;
     padding: 20px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, rgba(18, 125, 192, 0.712), #032147);
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #d0d8e4;
+    border-left: 3px solid #1a6ef5;
     backdrop-filter: blur(8px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26, 110, 245, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     z-index: 3;
 }
 
 .project-section:hover {
     transform: translateY(-20px);
+    box-shadow: 0 8px 30px rgba(26, 110, 245, 0.14);
+    border-color: rgba(26, 110, 245, 0.4);
 }
 
 .project-section h2 {
-    color: #ffffff;
+    color: #1a2233;
     text-align: center;
     margin-bottom: 10px;
     font-size: 2rem;
 }
 
 .project-section h3 {
-    color: #e0e0e0;
+    color: #5a6a82;
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -123,32 +137,36 @@
 }
 
 .tech-stack span {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(26, 110, 245, 0.07);
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.9rem;
-    color: white;
+    color: #1a6ef5;
+    border: 1px solid rgba(26, 110, 245, 0.25);
     backdrop-filter: blur(4px);
     transition: all 0.3s ease;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .tech-stack span:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(26, 110, 245, 0.15);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 110, 245, 0.15);
 }
 
 .project-description {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    background-color: rgba(26, 110, 245, 0.03);
+    border-radius: 6px;
     padding: 1.5rem;
     margin: 1.5rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(26, 110, 245, 0.06);
     backdrop-filter: blur(5px);
+    border: 1px solid rgba(26, 110, 245, 0.1);
 }
 
 
 .project-description p {
-    color: #e0e0e0;
+    color: #1a2233;
     line-height: 1.6;
     margin: 0;
     font-size: 1rem;

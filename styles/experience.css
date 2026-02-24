@@ -1,6 +1,6 @@
 /* === background for experience page === */
 html body.experience-page {
-    background: linear-gradient(135deg, rgba(31, 144, 214, 0.9), rgba(30, 58, 95, 0.9)) !important;
+    background: #f4f6f9 !important;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -28,19 +28,20 @@ html body.experience-page {
 }
 
 .experience-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background: #ffffff;
+    border-radius: 8px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 16px rgba(26, 110, 245, 0.07);
+    border: 1px solid #d0d8e4;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    color: white;
+    color: #1a2233;
 }
 
 .experience-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    box-shadow: 0 12px 40px 0 rgba(26, 110, 245, 0.14);
+    border-color: rgba(26, 110, 245, 0.35);
 }
 
 .experience-content {
@@ -57,22 +58,25 @@ html body.experience-page {
 .experience-header h2 {
     font-size: 1.5rem;
     margin: 0;
-    color: white;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+    color: #1a2233;
+    text-shadow: none;
 }
 
 .date {
     font-size: 0.9rem;
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
+    color: #5a6a82;
+    background: rgba(26, 110, 245, 0.06);
     padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(26, 110, 245, 0.2);
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .organization {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #1a6ef5;
     margin-bottom: 1rem;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .roles {
@@ -83,11 +87,13 @@ html body.experience-page {
 }
 
 .role {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(26, 110, 245, 0.07);
     padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.9rem;
-    color: white;
+    color: #1a6ef5;
+    border: 1px solid rgba(26, 110, 245, 0.2);
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .experience-list {
@@ -101,14 +107,14 @@ html body.experience-page {
     padding-left: 1.5rem;
     margin-bottom: 0.75rem;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.9);
+    color: #1a2233;
 }
 
 .experience-list li::before {
     content: "▹";
     position: absolute;
     left: 0;
-    color: #87CEFA;
+    color: #1a6ef5;
 }
 
 .experience-list li {
@@ -116,17 +122,17 @@ html body.experience-page {
 }
 
 .experience-card h4 {
-    color: white;
+    color: #1a2233;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 
 .experience-card h3 {
-    color: rgba(255, 255, 255, 0.9);
+    color: #5a6a82;
     font-size: 1rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #d0d8e4;
 }
 
 .experience-section ul.experience-list,
@@ -142,16 +148,16 @@ html body.experience-page {
 }
 
 .experience-item {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(26, 110, 245, 0.04);
     padding: 0.8rem 1rem;
-    border-radius: 8px;
-    color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    color: #1a2233;
     font-size: 0.95rem;
     transition: background-color 0.2s ease;
 }
 
 .experience-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(26, 110, 245, 0.09);
 }
 
 .experience-details {
@@ -162,15 +168,23 @@ html body.experience-page {
 
 /* Card-specific themes */
 .mate-rov {
-    background: linear-gradient(135deg, rgba(0, 118, 189, 0.2), rgba(0, 87, 145, 0.2));
+    background: linear-gradient(135deg, rgba(26, 110, 245, 0.05), #ffffff);
+    border-left: 3px solid rgba(26, 110, 245, 0.5);
 }
 
 .mate-floats {
-    background: linear-gradient(135deg, rgba(0, 150, 136, 0.2), rgba(0, 121, 107, 0.2));
+    background: linear-gradient(135deg, rgba(0, 168, 120, 0.06), #ffffff);
+    border-left: 3px solid rgba(0, 168, 120, 0.5);
 }
 
 .bronco-space {
-    background: linear-gradient(135deg, rgba(103, 58, 183, 0.2), rgba(81, 45, 168, 0.2));
+    background: linear-gradient(135deg, rgba(120, 60, 220, 0.06), #ffffff);
+    border-left: 3px solid rgba(120, 60, 220, 0.5);
+}
+
+.ngcp {
+    background: linear-gradient(135deg, rgba(26, 110, 245, 0.04), rgba(0, 168, 120, 0.04));
+    border-left: 3px solid rgba(26, 110, 245, 0.45);
 }
 
 /* Responsive adjustments */
