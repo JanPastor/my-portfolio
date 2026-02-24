@@ -18,3 +18,7 @@ Light Minimal / Clean Tech — dot-grid background, electric blue accents, colla
 - **Experience** — robotics and engineering roles
 - **Projects** — technical project showcase
 - **Gallery** — MATE ROV and MATE FLOATS photo collections
+
+## Planned Improvements
+- Add scroll-driven and entrance animations using **GSAP** (GreenSock) with the free ScrollTrigger plugin
+- Explore additional free animation libraries such as **anime.js** and **Lottie** for micro-interactions and icon animations
