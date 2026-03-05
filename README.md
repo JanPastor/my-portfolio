@@ -1,24 +1,16 @@
-﻿# Jan Pastor — Portfolio
+# React + Vite
 
-Personal portfolio website for an Electrical and Computer Engineering student at Cal Poly Pomona.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Live Demo
-[janpastor.github.io/my-portfolio](https://janpastor.github.io/my-portfolio/)
+Currently, two official plugins are available:
 
-## Tech Stack
-- Vanilla HTML, CSS, JavaScript
-- Fonts: Rajdhani, IBM Plex Mono (Google Fonts)
-- No frameworks or build tools
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Theme
-Light Minimal / Clean Tech — dot-grid background, electric blue accents, collapsible sidebar navigation.
+## React Compiler
 
-## Pages
-- **Home** — bio, skills, and links
-- **Experience** — robotics and engineering roles
-- **Projects** — technical project showcase
-- **Gallery** — MATE ROV and MATE FLOATS photo collections
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Planned Improvements
-- Add scroll-driven and entrance animations using **GSAP** (GreenSock) with the free ScrollTrigger plugin
-- Explore additional free animation libraries such as **anime.js** and **Lottie** for micro-interactions and icon animations
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

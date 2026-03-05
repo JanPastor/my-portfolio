@@ -1,0 +1,136 @@
+/* Import ECE-appropriate fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap");
+
+/* === ROOT VARIABLES AND BASE STYLES === */
+:root {
+  font-size: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  --text-primary: #f0f4f8; /* Off-white for dark mode */
+  --text-secondary: #9aa4b5; /* Light gray */
+  --bg-primary: #0a0e14; /* Deep dark blue/black */
+  --bg-secondary: rgba(16, 22, 34, 0.6); /* Semi-transparent dark */
+  --bg-surface: #101622;
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  /* Neon Accents */
+  --accent-primary: #00d4ff; /* Cyan/Neon Blue */
+  --accent-secondary: #ff00ff; /* Neon Purple */
+
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(16, 22, 34, 0.75);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glow-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* ECE Dark Tech Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  border-radius: 8px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #33deff, #ff33ff);
+}
+
+/* Firefox compatibility */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--bg-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "IBM Plex Mono", monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* === TYPOGRAPHY === */
+h1 {
+  margin: 0;
+  font-size: 60px;
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-shadow: none;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-shadow: none;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-shadow: none;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  color: var(--accent-primary);
+  text-shadow: none;
+  letter-spacing: 1px;
+}
+
+p,
+li {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 1px;
+  padding: 3px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}

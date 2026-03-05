@@ -1,0 +1,107 @@
+/* === HORIZONTAL TOP NAVIGATION BAR === */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(10, 14, 20, 0.85);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+.horizontal-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.horizontal-item {
+    display: flex;
+    align-items: center;
+}
+
+.horizontal-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.horizontal-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.horizontal-link:hover, .horizontal-link.active {
+    color: #fff;
+}
+
+.horizontal-link:hover::after, .horizontal-link.active::after {
+    width: 100%;
+}
+
+.linkedin-link {
+    color: var(--accent-primary);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.linkedin-link::after {
+    display: none;
+}
+
+.linkedin-link:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Mobile Responsiveness for Top Navbar */
+@media screen and (max-width: 768px) {
+    .horizontal-list {
+        display: none; /* In a real app we'd add a hamburger menu here */
+    }
+}
