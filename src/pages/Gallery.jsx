@@ -40,7 +40,7 @@ export default function Gallery() {
             onClick={() => setSelectedImage(src)}
           >
             <img 
-              src={src} 
+              src={`${import.meta.env.BASE_URL}${src.replace(/^\//, '')}`} 
               alt={`Gallery item ${idx}`} 
               style={{ width: '100%', borderRadius: '8px', border: '1px solid rgba(0, 212, 255, 0.2)' }} 
               loading="lazy"
@@ -69,7 +69,7 @@ export default function Gallery() {
             }}
           >
             <motion.img 
-              src={selectedImage} 
+              src={`${import.meta.env.BASE_URL}${selectedImage.replace(/^\//, '')}`} 
               alt="Fullscreen"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}

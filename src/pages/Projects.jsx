@@ -103,7 +103,7 @@ const ProjectCard = ({ project }) => {
         {project.images && project.images.map((img, idx) => (
           <img 
             key={`img-${idx}`} 
-            src={img} 
+            src={`${import.meta.env.BASE_URL}${img.replace(/^\//, '')}`} 
             alt={`${project.title} screenshot ${idx+1}`} 
             style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'cover', border: '1px solid rgba(255, 255, 255, 0.1)' }}
           />
